@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: url(/image/japon-art-numerique-fond_23-2151546140.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh; 
+}
+
+.image {
+    width: 300px;
+    height: 200px;
+    border-radius: 50%
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    box-shadow: rgba(0,0,0,0.1) 0 0 10px;
+
+}
+ul {
+    list-style: none;
+    display: flex;
+}
+ul li {
+    margin: 0 10px;
+}
+a {
+    text-decoration: none;
+    color:#fff;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: 0.5s;
+    border-radius: 6px;
+}
+a:hover {
+    background-color: #fff;
+    color: #000000;
+}
+
+h1 {
+    font-size: 50px;
+    color: #000000;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-size: 30px;
+    color: #000000;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+#intro {
+    font-size: 25px;
+    font-weight: bolder;
+    text-align: center;
+    margin-left: 40px;
+    margin-right: 40px;
+    color: #fff;
+}
+
+.intro2 {
+    font-size: 20px;
+    font-weight: bolder;
+    text-align: center;
+    margin-left: 40px;
+    margin-right: 40px;
+    color: #fff;
+}
+
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; 
+}
+
+
+.video-container iframe {
+    width: 345px; 
+    height: 560px; 
+}
+
+footer {
+    clear: both; 
+    position: relative; 
+    text-align: center;
+    padding: 10px;
+    background-color: #f1f1f1;
+}
+
+
+@media screen and (max-width: 1037px) {
+    body {
+        position: relative;
+    }
+
+    ul {
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        left: -1500px;
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(255, 255, 255, 0.8);
+        transition: 0.5s;
+        -webkit-backdrop-filter: blur(10px); 
+        backdrop-filter: blur(10px);
+    }
+    ul li {
+        margin: 20px 0;
+    }
+    ul li a{
+
+        text-transform: uppercase;
+
+    }
+    ul li a:hover{
+        color: #000000;
+    }
+    
+    .button{
+        z-index: 100;
+        width: 50px;
+        height: 50px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    .button::after{
+        content: "";
+        position: absolute;
+        width: 35px;
+        height: 2px;
+        background-color: #000000;
+        transform: translateY(-10px);
+        box-shadow: 0 10px 0 #000000 ;
+        transition: 0.5s;
+    }
+    .button.active::after{
+        transform: rotate(45deg);
+        box-shadow: 0 0 0 #000000 ;
+    }
+    .button::before{
+        content: "";
+        position: absolute;
+        width: 35px;
+        height: 2px;
+        background-color: #000000;
+        transform: translateY(10px);
+        transition: 0.5s;
+    }
+    .button.active::before{
+        transform: rotate(-45deg);
+    }
+    ul.active {
+        left :0 ;
+    }
+    
+}
